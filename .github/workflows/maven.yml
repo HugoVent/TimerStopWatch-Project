@@ -37,13 +37,13 @@ jobs:
       
     - name : Generate quality report
       env :
-        SONAR_TOKEN: ${{ secrets.SONARTOKEN }}
-        SONAR_HOST_URL : ${{ secrets.SONAR_HOST_URL }}
+        TOKEN: ${{ secrets.TOKEN }}
+        URL : ${{ secrets.URL }}
       run : >
         mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
         -Dsonar.host.url=https://sonarcloud.io
         -Dsonar.organization=HugoVent
         -Dsonar.projectKey=HugoVent_TimerStopWatch-Project
         -Dsonar.branch.name=main
-        -Dsonar.login=$SONAR_TOKEN
+        -Dsonar.login=$TOKEN
   
