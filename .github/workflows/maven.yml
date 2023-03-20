@@ -42,7 +42,7 @@ jobs:
         mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
         -Dsonar.host.orl=https://sonarcloud.io
         -Dsonar.organization=HugoVent
-        -Dsonar.projectKey=https://github.com/HugoVent/TimerStopWatch-Project
+        -Dsonar.projectKey=HugoVent_TimerStopWatch-Project
         -Dsonar.branch.name=main
-        -Dsonar.login=$SONAR_TOKEB
+        -Dsonar.login=$SONAR_TOKEN
   
