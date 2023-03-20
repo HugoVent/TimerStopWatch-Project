@@ -36,8 +36,8 @@ jobs:
       
     - name : Generate quality report 
       env : 
-        SONAR_TOKEN: ${ef1317b3671ff87688389723602b8fa7d2ecdad4}}
-        SONAR_URL: ${{602acf8c813e18349d66f9927b8743ec96ec94bc}}
+        SONAR_TOKEN: ${secrets.SONAR_TOKEN}}
+        SONAR_URL: ${{secrets.SONAR_URL}}
       run : > 
         mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
         -Dsonar.host.orl=https://sonarcloud.io
